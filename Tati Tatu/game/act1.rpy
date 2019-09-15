@@ -9,7 +9,7 @@ label beginning:
     tati "Yet another day like all the others..."
 
 
-    play sound steps
+    #play sound steps
 
 
     tati "Waking up, harvest some fruits, fetching water, cleaning up stuff. The same routine, every. single. Day."
@@ -22,7 +22,7 @@ label beginning:
     tati "I’m just the simple Tati stuck on her boring life. Just another one among these dozens."
     tati "(Ugh, I should just stop complaining and pick the berries already…)"
  
-    play sound steps
+    #play sound steps
  
     show tati surprised at left
  
@@ -48,7 +48,7 @@ label beginning:
  
     # slide tati to center
  
-    show tati mask at center
+    show tati mask at left
 
 
     tati "Hey Hugo! Iago! Look at this! I found it lying on the forest entrance and-"
@@ -132,14 +132,14 @@ label tuco_presentation_day:
     tati @ neutral "that’s fine! thank you for the advice!! hope we meet again! "
     tuco "Me too! ~"
  
-    hide tuco_neutral
+    hide tuco neutral
  
     stop music fadeout 0.3
  
  
     tati @ neutral "What a nice guy… I feel so much better now. Let’s head on through the forest!"
  
-    play sound steps
+    #play sound steps
  
     #fade out screen 
     #fade in screen
@@ -202,11 +202,11 @@ label tuco_presentation_night:
     tati @ neutral "That’s fine! thank you for the advice!! Hope we meet again! "
     tuco "Me too! ~"
 
-    hide tuco_neutral
+    hide tuco neutral
  
     tati @ neutral "What a nice guy… I feel so much better now. Let’s head on through the forest! It’s a long way."
  
-    play sound steps
+    #play sound steps
  
     #fade out screen 
     # fade in 
@@ -242,7 +242,7 @@ label first_jaguar:
     tati @ upset "I’m weak…?"
     xeni "Trust me, you’ll be glad you did. "
     #slide xeni out
-    hide onca_neutral
+    hide xeni 
 
     stop music fadeout 0.3
 
