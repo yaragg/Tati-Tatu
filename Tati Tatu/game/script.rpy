@@ -8,6 +8,7 @@ image tati neutral = "images/tati neutral.png"
 image tati sad = "images/tati sad.png"
 image tati happy = "images/tati happy.png"
 image tati curious = "images/tati curious.png"
+image tati mask = "images/tati curious.png"
 image tati horrified = "images/tati horrified.png"
 image tati ritual = "images/tati ritual.png"
 image tati scared = "images/tati upset.png"
@@ -29,6 +30,7 @@ image xeni angry = "images/xeni angry.png"
 
 image villager1 = "images/villager1.png"
 image villager2 = "images/villager2.png"
+image villagers = "images/aldeoes.png"
 
 
 image yara neutral = "images/yara neutral.png"

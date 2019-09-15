@@ -146,6 +146,7 @@ label tuco_presentation_day:
     tati @ neutral "This is so cool! Look at all these new fruits! Flowers! Leaves! Even that weird looking flying guy! "
     tati @ neutral "Oh…! "
  
+    jump first_jaguar
     return
 
 label tuco_presentation_night:
@@ -213,6 +214,7 @@ label tuco_presentation_night:
     tati @ neutral "This is so cool! Look at all these new fruits! Flowers! Leaves! Even that weird looking flying guy! "
     tati @ surprised "Oh…!"
  
+    jump first_jaguar
     return
 
 label first_jaguar:
