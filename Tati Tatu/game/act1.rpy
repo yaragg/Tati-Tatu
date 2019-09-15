@@ -4,7 +4,7 @@ label beginning:
  
     play music forest_ambience
     show aldeia1
-    show tati_upset at left
+    show tati upset at left
 
     tati "Yet another day like all the others..."
 
@@ -24,31 +24,31 @@ label beginning:
  
     play sound steps
  
-    show tati_surprised at left
+    show tati surprised at left
  
     tati "Oh, what’s that?"
 
 
-    show tati_mask at left
+    show tati mask at left
  
     tati "Oh my, what do we have here… This is new! "
     tati "Ha! Who said that complaining leads to nothing? This is a miracle! "
     tati "This surely isn’t from my tribe! Which means that there really is a world unknown to me behind these wooden bars…"
-    tati @ upset "a world i’ve been prived off, for my whole life, out of the fear of the people who came before me. "
+    tati @ upset "A world I’ve been deprived of, for my whole life, out of the fear of the people who came before me. "
     tati "A world these people taught me it never existed. Now I can prove them wrong… I knew it! "
-    tati @ surprised "where are my friends?! i need to tell them! "
+    tati @ surprised "Where are my friends?! I need to tell them! "
  
     # fade out screen
     # fade in aldeia1
 
-    show tati_surprised at left
+    show tati surprised at left
     show villagers at right
  
     tati "Oh, there they are! "
  
     # slide tati to center
  
-    show tati_mask at center
+    show tati mask at center
 
 
     tati "Hey Hugo! Iago! Look at this! I found it lying on the forest entrance and-"
@@ -69,9 +69,9 @@ label beginning:
 
 
     menu:
-        "explore during the day":
-            jump tuco_prensentation_day
-        "wait for the night to sneak out":
+        "Explore during the day":
+            jump tuco_presentation_day
+        "Wait for the night to sneak out":
             jump tuco_presentation_night
 
 
@@ -82,7 +82,7 @@ label beginning:
 label tuco_presentation_day:
  
     show aldeia1
-    show tati_neutral at left
+    show tati neutral at left
     play music sc_forest01
  
     tati "(I think if I go right now, while everyone’s busy, no one will notice me…!)"
@@ -93,11 +93,11 @@ label tuco_presentation_day:
  
     show floresta_densa_dia
     play music sc_forest01
-    show tati_neutral 
+    show tati neutral 
  
     tati "Wow… This is scary - and exciting! "
     tati "Ok… where do I begin? Where do I even go… "
-    tati @ mask "so, if i found it near here, it must be this way-"
+    tati @ mask "So, if I found it near here, it must be this way-"
 
     #slide Tuco in
     play music mu_tucano
@@ -110,7 +110,7 @@ label tuco_presentation_day:
     tuco "What are you looking for, walking alone in the forest? What is it you have on your hands?"
     tati "Oh, I am curious! I’m from a tribe not very far from here. I found this mask and I don’t know what it means…"
     tuco "I see... First time questing through the wilds, if I dare to presume? Judging by the mask you wear, I mean."
-    tati @ surprised "(the mask i wear? what is he talking about?)"
+    tati @ surprised "(The mask I wear? what is he talking about?)"
     tati "Yeah… I don’t know where to start to be honest. Just thought of returning this mask I found back to where it belongs."
     tuco "Then let me tell you something, my dear…"
     tuco "There are many lives and forms to be discovered around here and too many places to be explored… Know that if you be brave, nothing can ever stop you."
@@ -132,22 +132,22 @@ label tuco_presentation_day:
  
     #hide Tuco
  
-    tati @ neutral "what a nice guy… i feel so much better now. let’s head on through the forest!"
+    tati @ neutral "What a nice guy… I feel so much better now. Let’s head on through the forest!"
  
     play sound steps
  
     #fade out screen 
     #fade in screen
  
-    tati @ neutral "this is so cool! look at all these new fruits! flowers! leaves! even that weird looking fllying guy! "
-    tati @ neutral "oh…! "
+    tati @ neutral "This is so cool! Look at all these new fruits! Flowers! Leaves! Even that weird looking flying guy! "
+    tati @ neutral "Oh…! "
  
     return
 
 label tuco_presentation_night:
  
     show aldeia1
-    show tati_neutral at left
+    show tati neutral at left
     play music sc_forest_night
  
     tati "(Okay, I’ll wait ‘til it’s nightime. It’s probably better since everyone will be sleeping!)"
@@ -158,7 +158,7 @@ label tuco_presentation_night:
  
     show floresta_densa_noite
     play music sc_forest01
-    show tati_neutral 
+    show tati neutral 
  
     tati "Wow… This is scary - and exciting! "
     tati "Ok… where do I begin? Where do I even go… "
@@ -215,7 +215,7 @@ label first_jaguar:
     show floresta_densa_dia
     play music sc_forest
     play music mu_onca
-    show tati_neutral 
+    show tati neutral 
     show onca_neutral
 
     tati @ surprised "(Oh my! She’s fierce! She’s staring at me though…) "
@@ -234,7 +234,7 @@ label first_jaguar:
 
     stop music fadeout 0.3
 
-    show tati_upset at center
+    show tati upset at center
 
     tati "That was… really rude of her…"
     tati "So I’m not gonna make it? Should I go home and just give up…?"
@@ -253,7 +253,7 @@ label first_jaguar:
 label keep_going:
 
     show floresta_densa_dia
-    show tati_neutral
+    show tati neutral
 
     tati "No… I shouldn’t think about that girl. "
     tati "I’ll keep Tuco’s words in mind. He said I just needed to be brave. That’s what I’ll do."
@@ -264,7 +264,7 @@ label keep_going:
 label return_home:
 
     show floresta_densa_dia
-    show tati_upset at center
+    show tati upset at center
 
     tati "Yeah...I think it’s better for me to head back home. "
     tati "She’s right after all… I’m scared and weak. I shouldn’t even have left my home…"

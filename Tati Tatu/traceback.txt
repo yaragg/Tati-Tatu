@@ -1,40 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/act1.rpy", line 5, in script
-    play music forest_ambience
-  File "renpy/common/000statements.rpy", line 120, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "game/act1.rpy", line 5, in <module>
-    play music forest_ambience
-NameError: name 'forest_ambience' is not defined
+  File "game/act1.rpy", line 73, in script
+    jump tuco_prensentation_day
+ScriptError: could not find label 'tuco_prensentation_day'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/act1.rpy", line 5, in script
-    play music forest_ambience
-  File "C:\Users\Yara\Downloads\delete\renpy-7.3.2-sdk.7z\renpy-7.3.2-sdk\renpy\ast.py", line 1947, in execute
-    self.call("execute")
-  File "C:\Users\Yara\Downloads\delete\renpy-7.3.2-sdk.7z\renpy-7.3.2-sdk\renpy\ast.py", line 1935, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Yara\Downloads\delete\renpy-7.3.2-sdk.7z\renpy-7.3.2-sdk\renpy\statements.py", line 277, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 120, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "C:\Users\Yara\Downloads\delete\renpy-7.3.2-sdk.7z\renpy-7.3.2-sdk\renpy\python.py", line 2035, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Yara\Downloads\delete\renpy-7.3.2-sdk.7z\renpy-7.3.2-sdk\renpy\python.py", line 2028, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/act1.rpy", line 5, in <module>
-    play music forest_ambience
-NameError: name 'forest_ambience' is not defined
+  File "game/act1.rpy", line 73, in script
+    jump tuco_prensentation_day
+  File "C:\Users\Yara\Downloads\delete\renpy-7.3.2-sdk\renpy\ast.py", line 1695, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\Yara\Downloads\delete\renpy-7.3.2-sdk\renpy\script.py", line 894, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'tuco_prensentation_day'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.2.320
 Tati Tatu 1.0
-Sun Sep 15 12:31:17 2019
+Sun Sep 15 13:57:20 2019
