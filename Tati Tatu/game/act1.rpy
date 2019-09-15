@@ -100,7 +100,7 @@ label tuco_presentation_day:
 
     #slide Tuco in
     play music mu_tucano
-    show tuco_neutral
+    show tuco neutral
  
 
     tuco "Greetings, my dear child!"
@@ -166,7 +166,7 @@ label tuco_presentation_night:
     #slide Tuco in
  
     play music mu_tucano
-    show tuco_neutral
+    show tuco neutral
  
 
     tuco "Greetings, my dear child!"
@@ -215,7 +215,7 @@ label first_jaguar:
     play music sc_forest
     play music mu_onca
     show tati neutral 
-    show onca_neutral
+    show xeni neutral
 
     tati @ surprised "(Oh my! She’s fierce! She’s staring at me though…) "
     xeni "What do you want? "
