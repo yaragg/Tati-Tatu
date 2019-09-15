@@ -44,7 +44,7 @@ label beginning:
     show tati surprised at left
     show villagers at right
  
-    tati "Oh, there they are! "
+    tati "Oh, there they are!"
  
     # slide tati to center
  
