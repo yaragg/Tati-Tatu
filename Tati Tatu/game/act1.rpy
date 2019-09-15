@@ -92,7 +92,6 @@ label tuco_presentation_day:
     #fade out
  
     scene floresta_densa_dia
-    play music sc_forest01
     show tati neutral 
  
     tati "Wow… This is scary - and exciting! "

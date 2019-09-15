@@ -1,25 +1,25 @@
 label forest_fire:
-    show forest
+    scene forest_day_bg
     # Tati smells the air and looks confused.
 
-    show taty_confused at left
+    show tati confused at left
     tati "(Sniff, sniff… What’s this smell? It’s like lightning struck a tree.)"
     tati @ surprised "(but… worse.)"
 
     # Move Tati sprite to the right across the screen. Fade out screen.
 
-    show taty_neutral at left
+    show tati neutral at left
     tati "(I can smell it. It’s right…)"
-    show taty_horrified
+    show tati horrified
     tati "(....There.)"
 
-    show forest_fire
-    play music fire_music
+    scene forest_fire_bg
+    play music forest_fire
     play sound fire_burning
     tati "Oh… Oh no. Oh no."
     tati "It’s on fire! I… I gotta run!"
 
-    show taty_scared
+    show tati scared
     # Make Tati face left of screen. Move slightly to the left as if she were leaving, then stop just at the edge of the screen.
 
     yara "Wait!"
@@ -27,12 +27,12 @@ label forest_fire:
     # Make Tati face right.
     yara "Over here! I’m stuck! I-I need help! Please!!"
 
-    show fire_bg_with_capy
+    scene fire_bg_with_yara
     tati "Oh no! I’ll help, hold on!"
     # Move Tati towards the right of the screen, but stop. Flash screen white and red, shake screen.
     play sound log_falling
     tati "Ahhh!!"
-    show taty_ball
+    show tati ball
     tati "(That burning log almost landed on me! I almost {i}died!{/i})"
     tati "(I gotta run, I gotta run!)"
     tati "(What am I even doing here? We armadillos only ever run. We don’t fight, that just gets you killed. What can I even do against a wildfire?)"
@@ -43,9 +43,9 @@ label forest_fire:
 
     menu:
         "Try to save her and risk it all":
-            jump save_capy
+            jump save_yara
         "Run and save yourself":
-            jump not_save_capy
+            jump not_save_yara
 
 
 
@@ -54,11 +54,8 @@ label forest_fire:
 
     return
 
-label save_capy:
-
-    play music WGJ_incendio_TR PROD
-
-    show taty_neutral
+label save_yara:
+    show tati neutral
     tati "(I have to save her! What kind of girl am I if I just run and save myself?)"
     tati "(Running is what people back home would do. I left so I could be my own self!)"
 
@@ -70,18 +67,18 @@ label save_capy:
     tati @ surprised "oh! let’s see…"
     tati "(Aha! Maybe I can dig a hole under the tree and get her free that way!)"
 
-Move Tati back and forth like she’s digging.
+    # Move Tati back and forth like she’s digging.
     tati "There you go!"
     # Move Yara up like she’s springing free.
 
     yara "Oh my ancestors I thought I was gonna die thank you thank you so much--"
-Flash screen red and shake again.
+    # Flash screen red and shake again.
     tati "Eep! Come on, we need to leave!"
     # Move Yara and Tati left out of the screen.
 
-    show taty_neutral
+    show tati neutral
     tati "Look at all those flames… It’s awful. Is it just going to keep spreading?"
-    show capy_scared
+    show yara scared
     yara "Probably. I hope it won’t reach my village…"
     tati "(That’s right! What if it reaches home? Oh no…)"
     tati "We have to put the fire out!"
@@ -89,7 +86,7 @@ Flash screen red and shake again.
     yara @ surprised "what? but how?"
     tati "Fire needs wood to spread, right? What if we cut down the trees around it so it can’t spread?"
 
-    show capy_neutral
+    show yara neutral
     yara "That’s pretty crazy…"
     tati "We have to try!"
 
@@ -102,56 +99,56 @@ Flash screen red and shake again.
 
     tuco "Tati! "
     # Move Tati like she jumped in surprise.
-    tati @ surprised "ahh! what? who?"
+    tati @ surprised "Ahh! What? Who?"
     tati @ happy "oh! it’s you!"
 
-    hide capy
-    show toucan_scared
+    hide yara
+    show tuco scared
     tuco "What in the world are you doing here? It’s dangerous!"
     tati "We’re trying to put out the fire. But I don’t know what to do!"
     tuco @ surprised "ah. that’s…"
 
-    show toucan_neutral
+    show tuco neutral
     tuco "Alright. There are three of us… Perhaps we can make this work."
     tuco "I know of an old ritual for calling rain from the heavens."
-    tati @ surprised "what?! that’s amazing! toucan, we need to do this!"
+    tati @ surprised "what?! that’s amazing! Tuco, we need to do this!"
     tuco "Calm yourself, child. First, we need to go the highest spot we can find around here."
 
-    hide toucan
-    show capy_happy
+    hide tuco
+    show yara happy
     yara "Oh! I know where! There’s a hill right over there."
     tati "Alright, let’s go!"
 
-    stop music FADE OUT 0.3
+    stop music fadeout 0.3
 
     # Fade out screen.
     # Fade in forest bg
     tuco "Now, let’s do as I said. You both remember the dance, yes?"
     tati "Yeah!"
     yara "Let’s do this!"
-    show taty_ritual at left
-    show toucan_ritual at center
-    show capy_ritual at right
+    show tati ritual at left
+    show tuco ritual at center
+    show yara ritual at right
 
-    play music WGJ_Ritual_TR PROD
+    play music ritual
     # Animate all three of them swaying back and forth
     # Wait a while
     play sound rain
     # Flash screen light blue twice
-    show taty_surprised
+    show tati surprised
     tati "We… We did it. It actually worked!"
-    show toucan_neutral
+    show tuco neutral
     tuco "Of course it did. When have I ever led you astray?"
-    show capy_happy
+    show yara happy
     yara "Oh, look! The flames are dying down!"
 
-STOP WGJ_Ritual_TR PROD
+    stop music
 
-    show taty_happy
+    show tati happy
     tati "This is amazing. We really saved the woods!"
     tati "(This… feels good. I like this. I like the person I’m becoming.)"
 
-    play music WJ_Menu Theme_TR PROD
+    play music menu_theme
 
     yara @ surprised "hey… i didn’t get the chance to ask before, but why are you wearing a mask?"
     tati @ surprised "eh? mask? what are you talking about?"
@@ -159,12 +156,12 @@ STOP WGJ_Ritual_TR PROD
 
     tuco "Tati, Yara, what you two did was very brave. The fire could have reached any village around here… So many people could have been killed."
 
-    show taty_neutral
+    show tati neutral
     tati "I know. I… I wanted to run, at first. That’s what my people have always done. But… I’m glad I didn’t. Maybe running really isn’t always the answer."
     tati "(Maybe… Maybe not everything I learned back home is right.)"
     tati "(I did my own thing, for once. And it worked out. It was a huge risk, but I’m happy I took it.)"
-    tati @ happy "oh! but you helped out lots too, toucan. thank you so much for the ritual!"
-    tuco @ happy "i’m just glad we managed to make it work. i honestly don’t think i would have faced the flames by myself… you inspired me, taty. i saw how you helped yara here."
+    tati @ happy "oh! but you helped out lots too, tuco. thank you so much for the ritual!"
+    tuco @ happy "i’m just glad we managed to make it work. i honestly don’t think i would have faced the flames by myself… you inspired me, tati. i saw how you helped yara here."
     tati @ happy "thank you…"
     tati @ happy "(i’m so embarrassed i don’t even know what to say. he’s so wise. did i really inspire him?)"
     tuco "Yara, I will fly you--well, walk you back to your village. Tati, do you know where you’re headed?"
@@ -172,21 +169,21 @@ STOP WGJ_Ritual_TR PROD
     tuco "Yes. You have a good sense of direction. Well then… Good luck, dear. I’m sure you will find what you’re looking for."
     tati @ neutral " yeah… i hope so."
 
-    stop music FADE OUT 0.3
+    stop music fadeout 0.3
 
     # Fade out
     # Fade in
-    show forest_bg
-    show taty_neutral at left
+    scene forest_bg
+    show tati neutral at left
 
     tati "(It’s probably around here somewhere. I should be alright.)"
 
-    show xeni_neutral at right
+    show xeni neutral at right
     # Xeni slides on the scene 
 
     tati "(...or not)"
 
-    play music my_onca
+    play music xeni_theme
 
     xeni "Hey… Hello. "
     tati "Hi. "
@@ -208,7 +205,7 @@ STOP WGJ_Ritual_TR PROD
     xeni "Haha! Let’s go then! "
     tati "(That was really nice of her. And the things she said about me... I’m very happy. I think I never thought of myself as brave or anything like it... )."
 
-    stop music FADE OUT 0.3
+    stop music fadeout 0.3
 
     # fade out screen and characters
     # fade in floresta_densa_dia
@@ -220,7 +217,7 @@ STOP WGJ_Ritual_TR PROD
 
     # fade in aldeia 2
     show aldeia2
-    show tati_confused at left
+    show tati confused at left
 
     tati "…"
     tati "Oh… that is… familiar…"
@@ -237,7 +234,7 @@ STOP WGJ_Ritual_TR PROD
     #fade out screen 
 
     show cutscene_reflexo 
-    play music WGJ_Happy End_TR PROD
+    play music good_end
 
     # hide characters
     #slide down cutscene
@@ -246,3 +243,5 @@ STOP WGJ_Ritual_TR PROD
     tati "After all I’ve been through, all I shared and achieved, today and even all the other days, this is what I’ve become. "
     tati "And I…"
     tati "I really love it. "
+    "GOOD END"
+    scene black with longfade
