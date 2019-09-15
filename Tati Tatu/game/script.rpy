@@ -17,29 +17,27 @@ image tati ball = "images/tati ball.png"
 image tati confused = "images/tati confused.png"
 image tati surprised = "images/tati surprised.png"
 
-
-
-image tuco neutral = "images/tuco neutral.png"
-image tuco happy = "images/tuco talking.png"
-image tuco talking = "images/tuco talking.png"
-image tuco ritual = "images/tuco ritual.png"
-image tuco scared = "images/tuco scared.png"
-image xeni neutral = "images/xeni neutral.png"
-image xeni happy = "images/xeni happy.png"
-image xeni angry = "images/xeni angry.png"
+image tuco neutral = im.Flip("images/tuco neutral.png", horizontal=True)
+image tuco happy = im.Flip("images/tuco talking.png", horizontal=True)
+image tuco talking = im.Flip("images/tuco talking.png", horizontal=True)
+image tuco ritual = im.Flip("images/tuco ritual.png", horizontal=True)
+image tuco scared = im.Flip("images/tuco scared.png", horizontal=True)
+image xeni neutral = im.Flip("images/xeni neutral.png", horizontal=True)
+image xeni happy = im.Flip("images/xeni happy.png", horizontal=True)
+image xeni angry = im.Flip("images/xeni angry.png", horizontal=True)
 
 image villager1 = "images/villager1.png"
 image villager2 = "images/villager2.png"
 image villagers = "images/aldeoes.png"
 
 
-image yara neutral = "images/yara neutral.png"
-image yara surprised = "images/yara surprised.png"
-image yara happy = "images/yara happy.png"
-image yara dead = "images/yara dead.png"
-image yara neutral = "images/yara neutral.png"
-image yara ritual = "images/yara ritual.png"
-image yara scared = "images/yara scared.png"
+image yara neutral = im.Flip("images/yara neutral.png", True)
+image yara surprised = im.Flip("images/yara surprised.png", True)
+image yara happy = im.Flip("images/yara happy.png", True)
+image yara dead = im.Flip("images/yara dead.png", True)
+image yara neutral = im.Flip("images/yara neutral.png", True)
+image yara ritual = im.Flip("images/yara ritual.png", True)
+image yara scared = im.Flip("images/yara scared.png", True)
 
 image tribe_bg = "images/aldeia1.jpg"
 image aldeia1 = "images/aldeia1.jpg"
@@ -56,6 +54,7 @@ image fire2 = "images/fogo2.png"
 image fire3 = "images/fogo3.png"
 image cutscene_mirror = "images/cutscene_espelho.jpg"
 image cutscene_reflexo = "images/cutscene_espelho.jpg"
+image fire_bg_with_yara = "images/cutscene_incendio_yara1.jpg"
 
 
 
