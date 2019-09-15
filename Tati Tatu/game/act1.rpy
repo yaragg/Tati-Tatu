@@ -3,7 +3,7 @@ label beginning:
     #fade in aldeia1
  
     play music forest_ambience
-    show aldeia1
+    scene aldeia1
     show tati upset at left
 
     tati "Yet another day like all the others..."
@@ -86,7 +86,7 @@ label beginning:
 
 label tuco_presentation_day:
  
-    show aldeia1
+    scene aldeia1
     show tati neutral at left
     play music sc_forest01
  
@@ -96,7 +96,7 @@ label tuco_presentation_day:
     #slide tati out really fast
     #fade out
  
-    show floresta_densa_dia
+    scene floresta_densa_dia
     play music sc_forest01
     show tati neutral 
  
@@ -151,7 +151,7 @@ label tuco_presentation_day:
 
 label tuco_presentation_night:
  
-    show aldeia1
+    scene aldeia1
     show tati neutral at left
     play music sc_forest_night
  
@@ -208,7 +208,7 @@ label tuco_presentation_night:
     #fade out screen 
     # fade in 
  
-    show floresta_densa_dia
+    scene floresta_densa_dia
  
     tati @ neutral "This is so cool! Look at all these new fruits! Flowers! Leaves! Even that weird looking flying guy! "
     tati @ surprised "Oh…!"
@@ -217,7 +217,7 @@ label tuco_presentation_night:
 
 label first_jaguar:
  
-    show floresta_densa_dia
+    scene floresta_densa_dia
     play music sc_forest
     play music mu_onca
     show tati neutral 
@@ -257,7 +257,7 @@ label first_jaguar:
 
 label keep_going:
 
-    show floresta_densa_dia
+    scene floresta_densa_dia
     show tati neutral
 
     tati "No… I shouldn’t think about that girl. "
@@ -268,7 +268,7 @@ label keep_going:
 
 label return_home:
 
-    show floresta_densa_dia
+    scene floresta_densa_dia
     show tati upset at center
 
     tati "Yeah...I think it’s better for me to head back home. "

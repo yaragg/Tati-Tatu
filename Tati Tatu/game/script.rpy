@@ -4,6 +4,16 @@
 # name of the character.
 
 image black = "#000"
+image tati neutral = "images/tati neutral.png"
+image aldeia1 = "images/aldeia1.jpg"
+image aldeia2 = "images/aldeia2.jpg"
+image aldeoes = "images/aldeoes.png"
+image chuva = "images/chuva.png"
+image floresta_densa_dia = "images/floresta_densa_dia.jpg"
+image floresta_densa_noite = "images/floresta_densa_noite.jpg"
+image chuva = "images/chuva.png"
+
+
 
 define tati = Character("Tati")
 define xeni = Character("Xeni")
