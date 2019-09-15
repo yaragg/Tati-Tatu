@@ -44,7 +44,7 @@ label beginning:
     show tati surprised at left
     show villagers at right
  
-    tati "Oh, there they are! "
+    tati "Oh, there they are!"
  
     # slide tati to center
  
@@ -57,15 +57,20 @@ label beginning:
 
     villagers "What the heck is this, Tati?! Throw it out!!! It might be poisonous!!!"
     villagers "You shouldn’t be seeking out stuff like that! I’m gonna tell the chief!! "
+
+    hide villagers
  
     #slide villagers out
 
     tati "But…"
-    tati "(Huh. why did I have hope they would react any different?)"
+
+    show tati upset at left
+
+    tati "(Huh. Why did I have hope they would react any different?)"
     tati "(Fine then, I’ll try discovering about it by myself…)"
-    tati @ neutral "(this is my chance to finally explore the unknown. i won’t blow it.) "
+    tati @ neutral "(This is my chance to finally explore the unknown. i won’t blow it.) "
     tati "(I’ll have to sneak out of the village. Telling my parents is a no - they will react if not worse, the same as Hugo and Iago)"
-    tati @ confused "(should i wait for night time? or maybe go right now?)"
+    tati @ confused "(Should I wait for night time? or maybe go right now?)"
 
 
     menu:
@@ -100,7 +105,7 @@ label tuco_presentation_day:
 
     #slide Tuco in
     play music mu_tucano
-    show tuco neutral
+    show tuco neutral at right
  
 
     tuco "Greetings, my dear child!"
@@ -166,7 +171,8 @@ label tuco_presentation_night:
     #slide Tuco in
  
     play music mu_tucano
-    show tuco neutral
+
+    show tuco neutral at right
  
 
     tuco "Greetings, my dear child!"
