@@ -265,7 +265,7 @@ label keep_going:
     tati "No… I shouldn’t think about that girl. "
     tati "I’ll keep Tuco’s words in mind. He said I just needed to be brave. That’s what I’ll do."
 
-
+    jump forest_fire
     return
 
 label return_home:
@@ -284,3 +284,4 @@ label return_home:
     tati "Everything is the same around here, how will I ever find my way home?"
     tati "Ugh, why did I decide to leave the village at all?!"
     #shake screen 
+    jump forest_fire
