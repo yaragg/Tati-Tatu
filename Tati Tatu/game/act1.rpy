@@ -56,7 +56,7 @@ label beginning:
     #shake villagers
 
     villagers "What the heck is this, Tati?! Throw it out!!! It might be poisonous!!!"
-    villagers "You shouldn’t be seeking out stuff like that! I’m gonna tell the chief!! "
+    villagers "You shouldn’t be seeking out stuff like that! I’m gonna tell the chief!!"
 
     hide villagers
  
@@ -98,7 +98,7 @@ label tuco_presentation_day:
  
     scene floresta_densa_dia
     play music sc_forest01
-    show tati neutral 
+    show tati neutral at center
  
     tati "Wow… This is scary - and exciting! "
     tati "Ok… where do I begin? Where do I even go… "
@@ -107,7 +107,7 @@ label tuco_presentation_day:
     #slide Tuco in
     play music mu_tucano
     show tuco_neutral at right
- 
+    show tati neutral at left 
 
     tuco "Greetings, my dear child!"
     tati @ surprised "wah!! you scared me!!"
@@ -131,11 +131,10 @@ label tuco_presentation_day:
     tati @ neutral "that’s fine! thank you for the advice!! hope we meet again! "
     tuco "Me too! ~"
  
-    play sound bird_flying_away
+    hide tuco_neutral
  
     stop music fadeout 0.3
  
-    #hide Tuco
  
     tati @ neutral "What a nice guy… I feel so much better now. Let’s head on through the forest!"
  
@@ -147,6 +146,7 @@ label tuco_presentation_day:
     tati @ neutral "This is so cool! Look at all these new fruits! Flowers! Leaves! Even that weird looking flying guy! "
     tati @ neutral "Oh…! "
  
+    jump first_jaguar
     return
 
 label tuco_presentation_night:
@@ -161,9 +161,10 @@ label tuco_presentation_night:
     #slide tati out really fast
     #fade out
  
-    show floresta_densa_noite
+    scene floresta_densa_noite
     play music sc_forest01
     show tati neutral 
+    
  
     tati "Wow… This is scary - and exciting! "
     tati "Ok… where do I begin? Where do I even go… "
@@ -173,6 +174,7 @@ label tuco_presentation_night:
  
     play music mu_tucano
     show tuco_neutral at right
+    show tati neutral at left
  
 
     tuco "Greetings, my dear child!"
@@ -181,7 +183,7 @@ label tuco_presentation_night:
     tuco "What are you looking for, walking alone in the forest? What is it you have on your hands?"
     tati "Oh, I’m just curious! I’m from a tribe not very far from here. I found this mask and I don’t know what it means…"
     tuco "I see... First time questing through the wilds, if I dare to presume? Judging by the mask you wear, I mean."
-    tati @ surprised "(the mask i wear? what is he talking about?)"
+    tati @ surprised "(The mask i wear? what is he talking about?)"
     tati "Yeah… I don’t know where to start to be honest. Just thought of returning this mask I found back to where it belongs."
     tuco "Then let me tell you something, my dear…"
     tuco "There are many lives and forms to be discovered around here and too many places to be explored… Know that if you be brave, nothing can ever stop you."
@@ -196,12 +198,10 @@ label tuco_presentation_night:
     tuco "I’m Tuco, a pleasure to meet you, my dear. But now I should be going. I need to meet with my family soon!"
     tati @ neutral "That’s fine! thank you for the advice!! Hope we meet again! "
     tuco "Me too! ~"
+
+    hide tuco_neutral
  
-    play sound bird_flying_away
- 
-    #hide Tuco
- 
-    tati @ neutral "what a nice guy… I feel so much better now. Let’s head on through the forest! It’s a long way."
+    tati @ neutral "What a nice guy… I feel so much better now. Let’s head on through the forest! It’s a long way."
  
     play sound steps
  
@@ -213,6 +213,7 @@ label tuco_presentation_night:
     tati @ neutral "This is so cool! Look at all these new fruits! Flowers! Leaves! Even that weird looking flying guy! "
     tati @ surprised "Oh…!"
  
+    jump first_jaguar
     return
 
 label first_jaguar:
@@ -220,8 +221,8 @@ label first_jaguar:
     scene floresta_densa_dia
     play music sc_forest
     play music mu_onca
-    show tati neutral 
-    show onca_neutral
+    show tati neutral at left
+    show onca_neutral at right
 
     tati @ surprised "(Oh my! She’s fierce! She’s staring at me though…) "
     xeni "What do you want? "
@@ -236,6 +237,7 @@ label first_jaguar:
     tati @ upset "I’m weak…?"
     xeni "Trust me, you’ll be glad you did. "
     #slide xeni out
+    hide onca_neutral
 
     stop music fadeout 0.3
 
