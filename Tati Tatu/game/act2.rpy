@@ -44,7 +44,6 @@ label forest_fire:
     stop music
     play music forest_fire
     play ambience heavy_fire_ambience
-    #play sound fire_burning
     tati "Oh… Oh no. Oh no."
     tati "It’s on fire! I… I gotta run!"
 
@@ -241,6 +240,8 @@ label save_yara:
     xeni "Call me Xeni. "
     tati "Xeni, then. When I decided to leave the village I never thought I’d get this far. I made friends, I learned a lot. It’s risky... but I feel like it’s worth it. "
     xeni "It sure is. I’m living proof of it."
+
+    show xeni happy
     xeni "Are you still looking for that village? It’s just around here. I can go with you if you want and show you the way."
     tati "Yes!!! Thanks Xeni! I’m really excited to get there! "
     xeni "Haha! Let’s go then! "

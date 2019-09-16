@@ -235,7 +235,10 @@ label first_jaguar:
     tati "(Geez… she’s not in a good humour maybe…)"
     xeni "Passing by, huh? Can I give you some advice? "
     tati "Of course! I just met this guy who also advi- "
+    
+
     #flash screen
+    show xeni angry
     xeni "Give up."
     tati @ surprised "...What?"
     xeni "I know what you’re trying to do. Been there, done that. You’re weak. Go back home."

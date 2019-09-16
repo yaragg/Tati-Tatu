@@ -53,10 +53,9 @@ image fire_bg_with_yara1 = "images/bg/cutscene_incendio_yara1.jpg"
 image fire_bg_with_yara2 = "images/bg/cutscene_incendio_yara2.jpg"
 image fire_bg_with_yara3 = "images/bg/cutscene_incendio_yara3.jpg"
 
-
-
-
-
+image cutscene_badending1 = "images/bg/cutscene_badending1.jpg"
+image cutscene_badending2 = "images/bg/cutscene_badending2.jpg"
+image cutscene_badending3 = "images/bg/cutscene_badending3.jpg"
 
 
 define tati = Character("Tati")
@@ -88,13 +87,11 @@ define audio.tuco_theme = "sound/bgm/tuco_theme.wav"
 define audio.xeni_theme = "sound/bgm/xeni_theme.wav"
 
 
-define audio.steps = "sound/sfx/placeholder.mp3"
-define audio.fast_steps = "sound/sfx/placeholder.mp3"
-define audio.bird_flying_away = "sound/sfx/placeholder.mp3"
-define audio.fire_burning = "sound/sfx/placeholder.mp3"
-define audio.log_falling = "sound/sfx/placeholder.mp3"
-define audio.shoving = "sound/sfx/placeholder.mp3"
-define audio.rain = "sound/sfx/placeholder.mp3"
+define audio.steps = "sound/sfx/walking.wav"
+define audio.fast_steps = "sound/sfx/running.wav"
+define audio.log_falling = "sound/sfx/tree_falling.wav"
+define audio.shoving = "sound/sfx/shoving.wav"
+define audio.click = "sound/sfx/click.wav"
 
 
 init python:
