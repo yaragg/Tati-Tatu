@@ -1,8 +1,34 @@
+image ritual_chars:
+    contains:
+        "images/character/tuco ritual.png"
+        xalign 0.2
+        linear 0.5 xalign 0.1
+        linear 0.9 xalign 0.3
+        linear 0.5 xalign 0.2
+        repeat
+
+    contains:
+        "images/character/tati ritual.png"
+        xalign 0.5
+        linear 0.5 xalign 0.4
+        linear 0.9 xalign 0.6
+        linear 0.5 xalign 0.5
+        repeat
+
+    contains:
+        "images/character/yara ritual.png"
+        xalign 0.8
+        linear 0.5 xalign 0.7
+        linear 0.9 xalign 0.9
+        linear 0.5 xalign 0.8
+        repeat
+
 label forest_fire:
     scene forest_day_bg
     # Tati smells the air and looks confused.
 
     show tati confused at left
+    play ambience forest_fire_ambience
     tati "(Sniff, sniff… What’s this smell? It’s like lightning struck a tree.)"
     tati @ surprised "(but… worse.)"
 
@@ -14,8 +40,11 @@ label forest_fire:
     tati "(....There.)"
 
     scene forest_fire_bg
+    stop ambience
+    stop music
     play music forest_fire
-    play sound fire_burning
+    play ambience heavy_fire_ambience
+    #play sound fire_burning
     tati "Oh… Oh no. Oh no."
     tati "It’s on fire! I… I gotta run!"
 
@@ -27,10 +56,10 @@ label forest_fire:
     # Make Tati face right.
     yara "Over here! I’m stuck! I-I need help! Please!!"
 
-    scene fire_bg_with_yara
+    scene fire_bg_with_yara1
     tati "Oh no! I’ll help, hold on!"
     # Move Tati towards the right of the screen, but stop. Flash screen white and red, shake screen.
-    play sound log_falling
+    #play sound log_falling
     tati "Ahhh!!"
     show tati ball
     tati "(That burning log almost landed on me! I almost {i}died!{/i})"
@@ -91,7 +120,7 @@ label save_yara:
     tati "We have to try!"
 
     # Move Tati back and forth.
-    play sound shoving
+    #play sound shoving
     tati "Mmmmmmrmrrgh! I… can’t…! Why is this thing so sturdy?!"
     yara "We’re not going to pull this off. We’re not big or strong enough…"
     tati "But… But we can’t just do nothing! "
@@ -119,23 +148,33 @@ label save_yara:
     yara "Oh! I know where! There’s a hill right over there."
     tati "Alright, let’s go!"
 
-    stop music fadeout 0.3
+    stop music fadeout 3
+    stop ambience fadeout 3
+
+    scene black with mediumfade
 
     # Fade out screen.
     # Fade in forest bg
+    scene forest_day_bg with mediumfade
+    play music forest_day_ambience
     tuco "Now, let’s do as I said. You both remember the dance, yes?"
     tati "Yeah!"
     yara "Let’s do this!"
-    show tati ritual at left
-    show tuco ritual at center
-    show yara ritual at right
-
+    # show tati ritual at left
+    # show tuco ritual at center
+    # show yara ritual at right
     play music ritual
+    show ritual_chars
+    
+    $ renpy.pause(5)
+    hide ritual_chars with dissolve
+    play ambience rain_ambience
+
     # Animate all three of them swaying back and forth
     # Wait a while
-    play sound rain
+    #play sound rain
     # Flash screen light blue twice
-    show tati surprised
+    show tati surprised with dissolve
     tati "We… We did it. It actually worked!"
     show tuco neutral
     tuco "Of course it did. When have I ever led you astray?"
@@ -146,9 +185,9 @@ label save_yara:
 
     show tati happy
     tati "This is amazing. We really saved the woods!"
+    
+    play music menu_theme_ingame
     tati "(This… feels good. I like this. I like the person I’m becoming.)"
-
-    play music menu_theme
 
     yara @ surprised "hey… i didn’t get the chance to ask before, but why are you wearing a mask?"
     tati @ surprised "eh? mask? what are you talking about?"
@@ -169,11 +208,13 @@ label save_yara:
     tuco "Yes. You have a good sense of direction. Well then… Good luck, dear. I’m sure you will find what you’re looking for."
     tati @ neutral " yeah… i hope so."
 
-    stop music fadeout 0.3
+    stop music fadeout 3
+    stop ambience fadeout 3
+    scene black with mediumfade
 
     # Fade out
     # Fade in
-    scene forest_bg
+    scene forest_day_bg with mediumfade
     show tati neutral at left
 
     tati "(It’s probably around here somewhere. I should be alright.)"
@@ -216,7 +257,7 @@ label save_yara:
     tati "Well, here I go! "
 
     # fade in aldeia 2
-    show aldeia2
+    show village2
     show tati confused at left
 
     tati "…"
@@ -233,8 +274,22 @@ label save_yara:
 
     #fade out screen 
 
-    show cutscene_reflexo 
+    # scene mirror_cutscene with slidedown
+    # show mirror_cutscene:
+    #     xpos 0
+    #     ypos 0
+    #     linear 5.0 ypos 
+    scene black with shortfade
+
+    window hide
+    $ renpy.pause(0.3)
+
+
+    show mirror_cutscene with shortfade:
+        yalign 0.0
+        linear 8.0 yalign 1.0
     play music good_end
+    $ renpy.pause(9.0)
 
     # hide characters
     #slide down cutscene
@@ -243,5 +298,8 @@ label save_yara:
     tati "After all I’ve been through, all I shared and achieved, today and even all the other days, this is what I’ve become. "
     tati "And I…"
     tati "I really love it. "
-    "GOOD END"
+    $ renpy.pause(1)
+    window hide
+    show text "GOOD END"
+    $ renpy.pause(2)
     scene black with longfade

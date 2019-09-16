@@ -1,9 +1,9 @@
 label beginning:
  
-    #fade in aldeia1
+    #fade in village1
  
-    play music forest_ambience
-    scene aldeia1
+    play music forest_day_ambience
+    scene village1
     show tati upset at left
 
     tati "Yet another day like all the others..."
@@ -39,7 +39,7 @@ label beginning:
     tati @ surprised "Where are my friends?! I need to tell them! "
  
     # fade out screen
-    # fade in aldeia1
+    # fade in village1
 
     show tati surprised at left
     show villagers at right
@@ -86,9 +86,9 @@ label beginning:
 
 label tuco_presentation_day:
  
-    scene aldeia1
+    scene village1
     show tati neutral at left
-    play music sc_forest01
+    play music forest_day_ambience
  
     tati "(I think if I go right now, while everyone’s busy, no one will notice me…!)"
     tati "(Let’s go!!) "
@@ -96,8 +96,8 @@ label tuco_presentation_day:
     #slide tati out really fast
     #fade out
  
-    scene floresta_densa_dia
-    play music sc_forest01
+    scene forest_day_bg
+    play music forest_day_ambience
     show tati neutral at center
  
     tati "Wow… This is scary - and exciting! "
@@ -105,7 +105,7 @@ label tuco_presentation_day:
     tati @ mask "So, if I found it near here, it must be this way-"
 
     #slide Tuco in
-    play music mu_tucano
+    play music tuco_theme
     show tuco neutral at right
     show tati neutral at left 
  
@@ -134,7 +134,7 @@ label tuco_presentation_day:
  
     hide tuco neutral
  
-    stop music fadeout 0.3
+    stop music fadeout 2
  
  
     tati @ neutral "What a nice guy… I feel so much better now. Let’s head on through the forest!"
@@ -152,9 +152,9 @@ label tuco_presentation_day:
 
 label tuco_presentation_night:
  
-    scene aldeia1
+    scene village1
     show tati neutral at left
-    play music sc_forest_night
+    play music forest_night_ambience
  
     tati "(Okay, I’ll wait ‘til it’s nightime. It’s probably better since everyone will be sleeping!)"
  
@@ -162,8 +162,8 @@ label tuco_presentation_night:
     #slide tati out really fast
     #fade out
  
-    scene floresta_densa_noite
-    play music sc_forest01
+    scene forest_night_bg
+    play music forest_day_ambience
     show tati neutral 
     
  
@@ -173,7 +173,7 @@ label tuco_presentation_night:
 
     #slide Tuco in
  
-    play music mu_tucano
+    play music tuco_theme
 
     show tuco neutral at right
     show tati neutral at left
@@ -211,7 +211,7 @@ label tuco_presentation_night:
     #fade out screen 
     # fade in 
  
-    scene floresta_densa_dia
+    scene forest_day_bg
  
     tati @ neutral "This is so cool! Look at all these new fruits! Flowers! Leaves! Even that weird looking flying guy! "
     tati @ surprised "Oh…!"
@@ -221,9 +221,9 @@ label tuco_presentation_night:
 
 label first_jaguar:
  
-    scene floresta_densa_dia
-    play music sc_forest
-    play music mu_onca
+    scene forest_day_bg
+    play music forest_day_ambience
+    play music xeni_theme
 
     show tati neutral at left
     show xeni neutral at right
@@ -244,7 +244,8 @@ label first_jaguar:
     #slide xeni out
     hide xeni 
 
-    stop music fadeout 0.3
+    stop music fadeout 1
+    play music forest_day_ambience
 
     show tati upset at center
 
@@ -264,7 +265,7 @@ label first_jaguar:
 
 label keep_going:
 
-    scene floresta_densa_dia
+    scene forest_day_bg
     show tati neutral
 
     tati "No… I shouldn’t think about that girl. "
@@ -275,7 +276,7 @@ label keep_going:
 
 label return_home:
 
-    scene floresta_densa_dia
+    scene forest_day_bg
     show tati upset at center
 
     tati "Yeah...I think it’s better for me to head back home. "
