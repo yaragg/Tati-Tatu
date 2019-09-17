@@ -1,42 +1,51 @@
 label not_save_yara:
 
-    scene forest_day_bg
-    show tati scared at left
+    scene forest_fire_bg
+    show tati scared at center
 
     tati "I better run!!!!"
-    tati @ upset "(i’m sorry…)"
+
+    scene forest_day_bg with shortfade
+    show tati upset at center
+    stop music fadeout 2
+    tati @ upset "(I’m sorry…)"
+    
+    hide tati with dissolve
+    #slide tati to right
     play sound fast_steps
+    scene black with longfade
     jump back_to_tribe
     return
 
 label back_to_tribe:
     play ambience forest_day_ambience
 
-    scene forest_day_bg
-    show tati upset at left
+    scene forest_day_bg with fade
+    show tati upset at left with dissolve
 
     tati "I should go back to my tribe maybe… Maybe I should never have left…"
 
-    show tuco neutral at right
+    show tuco neutral at right with dissolve
+    play music tuco_theme fadein 3
 
-    tuco @ scared "tati, oh dear! did you see the fire?!"
+    tuco @ scared "Tati, oh dear! Did you see the fire?!"
     tati "Yes!! I just ran from there! That was so scary!"
-    tuco @ scared "indeed it was. i almost got fried up myself! "
-    tati @ upset "oh no… the wilds… it’s so scary around here. how do you manage to live in such a perilous place? "
+    tuco @ scared "Indeed it was. I almost got fried up myself!"
+    tati @ upset "Oh no… The wilds… It’s so scary around here. How do you manage to live in such a perilous place? "
     tuco "Well, Tati, it’s a matter of experience and independence."
     tuco "Anywhere and in any place, there will be hardships."
-    tuco "The difference is in what you decide to do about it. That’s when you start to know yourself. "
+    tuco "The difference is in what you decide to do about it. That’s when you start to know yourself."
     tati "I understand…"
-    tati "I think I wanna go back to my tribe. I’ve had enough of adventures myself. "
+    tati "I think I wanna go back to my tribe. I’ve had enough of adventures myself."
     tati "There, I can try and teach them about all I learned on this journey, and maybe I'll change them for the best."
-    tuco @ happy "that is very noble of you, tati. "
+    tuco @ happy "That is very noble of you, Tati. "
     tuco "Do want any company on your way back? "
-    tati @ neutral "that would be lovely! "
+    tati @ neutral "That would be lovely! "
 
-    stop music fadeout 0.3
+    stop music fadeout 3
     play ambience forest_night_ambience
-    tati @ neutral "(it’s almost night time though…)"
-    tati @ neutral "(should i stop to sleep before heading back?)"
+    tati @ neutral "(It’s almost night time though…)"
+    tati @ neutral "(Should I stop to sleep before heading back?)"
 
     menu:
         "It’d be safer to wait ‘til morning.":
@@ -49,18 +58,18 @@ label back_to_tribe:
     return
 
 label neutral_ending:
-    scene forest_day_bg
+    scene forest_day_bg 
     show tati neutral at left
     show tuco neutral at right
 
     tati "We should get going then! It’s a long walk back. "
-    tuco "For you, maybe. I’ll make good use of my wings, thank you very much."
-    tati @ happy "oh, you! "
+    tuco @ talking "For you, maybe. I’ll make good use of my wings, thank you very much."
+    tati @ happy "Oh, you! "
 
-    scene village1
-    show tati neutral at left
+    scene village1 with longfade
+    show tati neutral at left with dissolve
 
-    play music menu_theme_ingame
+    play music menu_theme_ingame fadein 3
 
     tati "Well, here I am. "
     tati "Time to try and open up the minds of these people."
@@ -91,23 +100,23 @@ label bad_ending:
     tuco "Of course! We meet tomorrow then. See you, dear. "
     tati "See you, my friend. "
 
-    scene forest_night_bg
-    show tati neutral at center
+    scene forest_night_bg with mediumfade
+    show tati neutral at center with dissolve
 
     stop music
-    stop ambience
-    play music bad_end noloop
+    
+    
 
     tati "(This feels like a good place to lie down and rest)."
     tati "(And it’s sufficiently distant from the fire, as far as I can see)."
     tati "(I laid down on the ground, hid myself a little between leaves and bushes)."
-    tati "(But… it just occurred to me… why did I decide to sleep here?)"
+    tati @ confused "(But… it just occurred to me… why did I decide to sleep here?)"
     tati "(I was afraid of the jungle, all I wanted was to head home the fastest I could)."
-    tati "(Why… did I even make this decision?)"
+    tati @ confused "(Why… Did I even make this decision?)"
 
     
 
-    tati "(Am I… Am I making my own decisions…?)"
+    tati @ scared "(Am I… Am I making my own decisions…?)"
 
     menu:
         "Yes.":
@@ -138,10 +147,14 @@ label bad_ending1:
 label bad_ending2:
 
     tati "(I should sleep…?)"
-    tati "(I don’t want to sleep… but I’m suddenly so tired…)"
+    tati "(I don’t want to sleep… But I’m suddenly so tired…)"
     tati "(…)"
 
-    scene forest_night_bg
+    stop ambience
+    play music bad_end noloop fadein 2
+    scene black with longfade
+
+
     # Hide characters, show only dialog. 
 
     tati "(...)"
@@ -162,10 +175,11 @@ label bad_ending2:
     tati "DEAD!!!!!!!"
     #shaking screen
     tati "DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD DEAD"
+    tati "DEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEADDEAD"
     #shaking screen blinking red
-    tati "(and it’s all because of… me)"
-    tati "(but…)"
-    tati "(w h o  a m  I?)"
+    tati "(And it’s all because of… me)"
+    tati "(But…)"
+    tati "(w h o    a m      I?)"
 
     $ renpy.pause(1)
     window hide

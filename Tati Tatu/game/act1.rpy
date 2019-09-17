@@ -1,8 +1,8 @@
 label beginning:
  
     #fade in village1
- 
-    play music forest_day_ambience
+    stop music
+    play ambience forest_day_ambience
     scene village1
     show tati upset at left
 
@@ -31,7 +31,7 @@ label beginning:
 
     show tati mask at left
  
-    tati "Oh my, what do we have here… This is new! "
+    tati "Oh my, what do we have here… This is new!"
     tati "Ha! Who said that complaining leads to nothing? This is a miracle! "
     tati "This surely isn’t from my tribe! Which means that there really is a world unknown to me behind these wooden bars…"
     tati @ upset "A world I’ve been deprived of, for my whole life, out of the fear of the people who came before me. "
@@ -51,7 +51,7 @@ label beginning:
     show tati mask at left
 
 
-    tati "Hey Hugo! Iago! Look at this! I found it lying on the forest entrance and-"
+    tati "Hey, take a look at this! I found it lying on the forest entrance and-"
  
     #shake villagers
 
@@ -68,7 +68,7 @@ label beginning:
 
     tati "(Huh. Why did I have hope they would react any different?)"
     tati "(Fine then, I’ll try discovering about it by myself…)"
-    tati @ neutral "(This is my chance to finally explore the unknown. i won’t blow it.) "
+    tati @ neutral "(This is my chance to finally explore the unknown. I won’t blow it.) "
     tati "(I’ll have to sneak out of the village. Telling my parents is a no - they will react if not worse, the same as Hugo and Iago)"
     tati @ confused "(Should I wait for night time? or maybe go right now?)"
 
@@ -88,22 +88,22 @@ label tuco_presentation_day:
  
     scene village1
     show tati neutral at left
-    play music forest_day_ambience
+    play ambience forest_day_ambience
  
-    tati "(I think if I go right now, while everyone’s busy, no one will notice me…!)"
+    tati "(I think if I go right now while everyone’s busy, no one will notice me…!)"
     tati "(Let’s go!!) "
  
     #slide tati out really fast
     #fade out
  
-    scene forest_day_bg
-    play music forest_day_ambience
+    scene forest_day_bg with shortfade
+    play ambience forest_day_ambience
     show tati neutral at center
  
     tati "Wow… This is scary - and exciting! "
-    tati "Ok… where do I begin? Where do I even go… "
+    tati "Ok… Where do I begin? Where do I even go… "
     tati @ mask "So, if I found it near here, it must be this way-"
-
+    stop music
     #slide Tuco in
     play music tuco_theme
     show tuco neutral at right
@@ -111,30 +111,32 @@ label tuco_presentation_day:
  
 
     tuco "Greetings, my dear child!"
-    tati @ surprised "wah!! you scared me!!"
+    tati @ surprised "Wah!! You scared me!!"
     tuco "Oh, forgive me! It wasn’t my intention to startle you!"
     tuco "What are you looking for, walking alone in the forest? What is it you have on your hands?"
-    tati "Oh, I am curious! I’m from a tribe not very far from here. I found this mask and I don’t know what it means…"
+    tati "Oh, I’m just curious! I’m from a tribe not very far from here. I found this mask and I don’t know what it means…"
     tuco "I see... First time questing through the wilds, if I dare to presume? Judging by the mask you wear, I mean."
-    tati @ surprised "(The mask I wear? what is he talking about?)"
+    tati @ surprised "(The mask i wear? what is he talking about?)"
     tati "Yeah… I don’t know where to start to be honest. Just thought of returning this mask I found back to where it belongs."
-    tuco "Then let me tell you something, my dear…"
-    tuco "There are many lives and forms to be discovered around here and too many places to be explored… Know that if you be brave, nothing can ever stop you."
-    tuco "The place you seek is far ahead, through the woods. It’s very well hidden."
-    tati @ surprised "(this bird seems very wise! i’m happy he’s helping me out!)"
+    tuco @ talking "Then let me tell you something, my dear…"
+    tuco @ talking "There are many lives and forms to be discovered around here and too many places to be explored… Know that if you be brave, nothing can ever stop you."
+    tuco @ talking "The place you seek is far ahead, through the woods. It’s very well hidden."
+    tati @ surprised "(This bird seems very wise! I’m happy he’s helping me out!)"
     tati "So I just need to go that way? I hope I don’t get lost though..."
     tuco "Don’t worry dear…"
-    tuco "Like I said, courage will keep you on track."
+    tuco @ talking "Like I said, courage will keep you on track."
     tuco "I’m sure you will find the answers you seek once you get there. "
     tati "(The answers I seek…)"
     tati "Thank you! How should I call you Mr.?"
     tuco "I’m Tuco, a pleasure to meet you, my dear. But now I should be going. I need to meet with my family soon!"
-    tati @ neutral "that’s fine! thank you for the advice!! hope we meet again! "
+    tati @ neutral "That’s fine! Thank you for the advice!! Hope we meet again!"
     tuco "Me too! ~"
  
+    stop music fadeout 2
+
     hide tuco neutral
  
-    stop music fadeout 2
+    
  
  
     tati @ neutral "What a nice guy… I feel so much better now. Let’s head on through the forest!"
@@ -154,7 +156,7 @@ label tuco_presentation_night:
  
     scene village1
     show tati neutral at left
-    play music forest_night_ambience
+    play ambience forest_night_ambience
  
     tati "(Okay, I’ll wait ‘til it’s nightime. It’s probably better since everyone will be sleeping!)"
  
@@ -162,13 +164,13 @@ label tuco_presentation_night:
     #slide tati out really fast
     #fade out
  
-    scene forest_night_bg
+    scene forest_night_bg with shortfade
     play music forest_day_ambience
     show tati neutral 
     
  
     tati "Wow… This is scary - and exciting! "
-    tati "Ok… where do I begin? Where do I even go… "
+    tati "Ok… Where do I begin? Where do I even go… "
     tati @ mask "Hmmm, if I found it near here, it must be this way-"
 
     #slide Tuco in
@@ -188,32 +190,36 @@ label tuco_presentation_night:
     tuco "I see... First time questing through the wilds, if I dare to presume? Judging by the mask you wear, I mean."
     tati @ surprised "(The mask i wear? what is he talking about?)"
     tati "Yeah… I don’t know where to start to be honest. Just thought of returning this mask I found back to where it belongs."
-    tuco "Then let me tell you something, my dear…"
-    tuco "There are many lives and forms to be discovered around here and too many places to be explored… Know that if you be brave, nothing can ever stop you."
-    tuco "The place you seek is far ahead, through the woods. It’s very well hidden."
-    tati @ surprised "(this bird seems very wise! i’m happy he’s helping me out!)"
+    tuco @ talking "Then let me tell you something, my dear…"
+    tuco @ talking "There are many lives and forms to be discovered around here and too many places to be explored… Know that if you be brave, nothing can ever stop you."
+    tuco @ talking "The place you seek is far ahead, through the woods. It’s very well hidden."
+    tati @ surprised "(This bird seems very wise! I’m happy he’s helping me out!)"
     tati "So I just need to go that way? I hope I don’t get lost though..."
     tuco "Don’t worry dear…"
-    tuco "Like I said, courage will keep you on track."
+    tuco @ talking "Like I said, courage will keep you on track."
     tuco "I’m sure you will find the answers you seek once you get there. "
     tati "(The answers I seek…)"
     tati "Thank you! How should I call you Mr.?"
     tuco "I’m Tuco, a pleasure to meet you, my dear. But now I should be going. I need to meet with my family soon!"
-    tati @ neutral "That’s fine! thank you for the advice!! Hope we meet again! "
+    tati @ neutral "That’s fine! Thank you for the advice!! Hope we meet again!"
     tuco "Me too! ~"
+
+    stop music fadeout 2
 
     hide tuco neutral
  
     tati @ neutral "What a nice guy… I feel so much better now. Let’s head on through the forest! It’s a long way."
  
     #play sound steps
- 
+    scene black with shortfade
     #fade out screen 
     # fade in 
  
-    scene forest_day_bg
+    scene forest_day_bg with shortfade
+
+    show tati neutral at center
  
-    tati @ neutral "This is so cool! Look at all these new fruits! Flowers! Leaves! Even that weird looking flying guy! "
+    tati "This is so cool! Look at all these new fruits! Flowers! Leaves! Even that weird looking flying guy! "
     tati @ surprised "Oh…!"
  
     jump first_jaguar
@@ -222,9 +228,9 @@ label tuco_presentation_night:
 label first_jaguar:
  
     scene forest_day_bg
-    play music forest_day_ambience
+    play ambience forest_day_ambience
     play music xeni_theme
-
+    #slide tati to left
     show tati neutral at left
     show xeni neutral at right
 
@@ -232,7 +238,7 @@ label first_jaguar:
     tati @ surprised "(Oh my! She’s fierce! She’s staring at me though…) "
     xeni "What do you want? "
     tati @ surprised "Oh, nothing. I’m just passing by…"
-    tati "(Geez… she’s not in a good humour maybe…)"
+    tati "(Geez… She’s not in a good humour maybe…)"
     xeni "Passing by, huh? Can I give you some advice? "
     tati "Of course! I just met this guy who also advi- "
     
@@ -247,10 +253,11 @@ label first_jaguar:
     #slide xeni out
     hide xeni 
 
-    stop music fadeout 1
-    play music forest_day_ambience
+    stop music fadeout 2 #esse fade out n ta funcionando
 
-    show tati upset at center
+    play ambience forest_day_ambience
+
+    show tati upset at left
 
     tati "That was… really rude of her…"
     tati "So I’m not gonna make it? Should I go home and just give up…?"
@@ -269,7 +276,8 @@ label first_jaguar:
 label keep_going:
 
     scene forest_day_bg
-    show tati neutral
+    play ambience forest_day_ambience
+    show tati neutral at left
 
     tati "No… I shouldn’t think about that girl. "
     tati "I’ll keep Tuco’s words in mind. He said I just needed to be brave. That’s what I’ll do."
@@ -280,16 +288,20 @@ label keep_going:
 label return_home:
 
     scene forest_day_bg
-    show tati upset at center
+    play ambience forest_day_ambience
+    show tati upset at left
 
     tati "Yeah...I think it’s better for me to head back home. "
     tati "She’s right after all… I’m scared and weak. I shouldn’t even have left my home…"
     tati "Let’s just go back… "
 
+
+    scene black with shortfade
+    scene forest_day_bg with shortfade
     # fade out
     # fade in 
-
-    tati "I’m… lost!!! "
+    show tati upset at center
+    tati @ surprised "I’m… lost!!! "
     tati "Everything is the same around here, how will I ever find my way home?"
     tati "Ugh, why did I decide to leave the village at all?!"
     #shake screen 
