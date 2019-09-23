@@ -70,7 +70,9 @@ label beginning:
     tati "(Fine then, I’ll try discovering about it by myself…)"
     tati @ neutral "(This is my chance to finally explore the unknown. I won’t blow it.) "
     tati "(I’ll have to sneak out of the village. Telling my parents is a no - they will react if not worse, the same as Hugo and Iago)"
-    tati @ confused "(Should I wait for night time? or maybe go right now?)"
+    
+    show tati confused at left
+    tati "(Should I wait for night time? or maybe go right now?)"
 
 
     menu:
@@ -95,10 +97,12 @@ label tuco_presentation_day:
  
     #slide tati out really fast
     #fade out
+    hide tati with easeoutright
  
     scene forest_day_bg with shortfade
     play ambience forest_day_ambience
-    show tati neutral at center
+    show tati neutral at left with dissolve
+    show tati neutral at center with MoveTransition(0.8) 
  
     tati "Wow… This is scary - and exciting! "
     tati "Ok… Where do I begin? Where do I even go… "
@@ -106,14 +110,17 @@ label tuco_presentation_day:
     stop music
     #slide Tuco in
     play music tuco_theme
-    show tuco neutral at right
-    show tati neutral at left 
  
-
+    show tuco neutral at right with easeinright
     tuco "Greetings, my dear child!"
-    tati @ surprised "Wah!! You scared me!!"
+
+ 
+    show tati surprised at left with MoveTransition(0.3)
+    tati "Wah!! You scared me!!"
     tuco "Oh, forgive me! It wasn’t my intention to startle you!"
     tuco "What are you looking for, walking alone in the forest? What is it you have on your hands?"
+
+    show tati neutral
     tati "Oh, I’m just curious! I’m from a tribe not very far from here. I found this mask and I don’t know what it means…"
     tuco "I see... First time questing through the wilds, if I dare to presume? Judging by the mask you wear, I mean."
     tati @ surprised "(The mask i wear? what is he talking about?)"
@@ -134,9 +141,7 @@ label tuco_presentation_day:
  
     stop music fadeout 2
 
-    hide tuco neutral
- 
-    
+    hide tuco neutral with easeoutright
  
  
     tati @ neutral "What a nice guy… I feel so much better now. Let’s head on through the forest!"
@@ -145,7 +150,10 @@ label tuco_presentation_day:
  
     #fade out screen 
     #fade in screen
- 
+    scene black with shortfade
+    scene forest_day_bg with shortfade
+    show tati neutral at left with dissolve
+
     tati @ neutral "This is so cool! Look at all these new fruits! Flowers! Leaves! Even that weird looking flying guy! "
     tati @ neutral "Oh…! "
  
@@ -166,7 +174,8 @@ label tuco_presentation_night:
  
     scene forest_night_bg with shortfade
     play music forest_day_ambience
-    show tati neutral 
+    show tati neutral at left with dissolve
+    show tati neutral at center with MoveTransition(0.8) 
     
  
     tati "Wow… This is scary - and exciting! "
@@ -180,12 +189,16 @@ label tuco_presentation_night:
     show tuco neutral at right
     show tati neutral at left
 
- 
-
+    show tuco neutral at right with easeinright
     tuco "Greetings, my dear child!"
-    tati @ surprised "Wah!! You scared me!!"
+
+ 
+    show tati surprised at left with MoveTransition(0.3)
+    tati "Wah!! You scared me!!"
     tuco "Oh, forgive me! It wasn’t my intention to startle you!"
     tuco "What are you looking for, walking alone in the forest? What is it you have on your hands?"
+
+    show tati neutral
     tati "Oh, I’m just curious! I’m from a tribe not very far from here. I found this mask and I don’t know what it means…"
     tuco "I see... First time questing through the wilds, if I dare to presume? Judging by the mask you wear, I mean."
     tati @ surprised "(The mask i wear? what is he talking about?)"
@@ -206,7 +219,7 @@ label tuco_presentation_night:
 
     stop music fadeout 2
 
-    hide tuco neutral
+    hide tuco neutral with easeoutright
  
     tati @ neutral "What a nice guy… I feel so much better now. Let’s head on through the forest! It’s a long way."
  
@@ -217,7 +230,7 @@ label tuco_presentation_night:
  
     scene forest_day_bg with shortfade
 
-    show tati neutral at center
+    show tati neutral at left with dissolve
  
     tati "This is so cool! Look at all these new fruits! Flowers! Leaves! Even that weird looking flying guy! "
     tati @ surprised "Oh…!"
@@ -227,12 +240,12 @@ label tuco_presentation_night:
 
 label first_jaguar:
  
-    scene forest_day_bg
+    # scene forest_day_bg with shortfade
     play ambience forest_day_ambience
     play music xeni_theme
     #slide tati to left
     show tati neutral at left
-    show xeni neutral at right
+    show xeni neutral at right with dissolve
 
 
     tati @ surprised "(Oh my! She’s fierce! She’s staring at me though…) "
@@ -244,14 +257,14 @@ label first_jaguar:
     
 
     #flash screen
-    show xeni angry
+    show xeni angry with flash
     xeni "Give up."
     tati @ surprised "...What?"
     xeni "I know what you’re trying to do. Been there, done that. You’re weak. Go back home."
-    tati @ upset "I’m weak…?"
+    tati upset "I’m weak…?"
     xeni "Trust me, you’ll be glad you did. "
     #slide xeni out
-    hide xeni 
+    hide xeni with easeoutright
 
     stop music fadeout 2 #esse fade out n ta funcionando
 
@@ -300,7 +313,7 @@ label return_home:
     scene forest_day_bg with shortfade
     # fade out
     # fade in 
-    show tati upset at center
+    show tati upset at left with dissolve
     tati @ surprised "I’m… lost!!! "
     tati "Everything is the same around here, how will I ever find my way home?"
     tati "Ugh, why did I decide to leave the village at all?!"

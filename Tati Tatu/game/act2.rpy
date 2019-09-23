@@ -1,6 +1,6 @@
 image ritual_chars:
     contains:
-        "images/character/tuco ritual.png"
+        "images/character/tati ritual.png"
         xalign 0.2
         linear 0.5 xalign 0.1
         linear 0.9 xalign 0.3
@@ -8,7 +8,7 @@ image ritual_chars:
         repeat
 
     contains:
-        "images/character/tati ritual.png"
+        "images/character/yara ritual.png"
         xalign 0.5
         linear 0.5 xalign 0.4
         linear 0.9 xalign 0.6
@@ -16,57 +16,100 @@ image ritual_chars:
         repeat
 
     contains:
-        "images/character/yara ritual.png"
+        "images/character/tuco ritual.png"
         xalign 0.8
         linear 0.5 xalign 0.7
         linear 0.9 xalign 0.9
         linear 0.5 xalign 0.8
         repeat
 
+image yara_fire_bg_animated:
+        "images/bg/cutscene_incendio_yara1.jpg"
+        0.25
+        "images/bg/cutscene_incendio_yara2.jpg"
+        0.25
+        "images/bg/cutscene_incendio_yara3.jpg"
+        0.25
+        "images/bg/cutscene_incendio_yara2.jpg"
+        0.25
+        repeat
+
+image flames_animated:
+        "images/bg/fogo1.png"
+        0.25
+        "images/bg/fogo2.png"
+        0.25
+        "images/bg/fogo3.png"
+        0.25
+        "images/bg/fogo2.png"
+        0.25
+        repeat
+
+image rain_animated:
+        "images/bg/chuva.png"
+        yalign 1.0
+        linear 2.0 yalign 0.0
+        yalign 1.0
+        repeat
+
+
 label forest_fire:
     scene forest_day_bg 
     # Tati smells the air and looks confused.
 
-    show tati confused at center
+    show tati confused at left
     play ambience forest_fire_ambience
     tati "(Sniff, sniff… What’s this smell? It’s like lightning struck a tree.)"
     tati @ surprised "(But… worse.)"
 
-    # Move Tati sprite to the right across the screen. Fade out screen.
-
-    show tati neutral at center
+    show tati neutral at center with MoveTransition(0.8)
     tati "(I can smell it. It’s right…)"
     show tati horrified
     tati "(...There.)"
 
-    scene forest_fire_bg
+    scene forest_fire_bg with flashred
     stop ambience
     stop music
     play music forest_fire
     play ambience heavy_fire_ambience
-    show tati scared at left
+    show tati scared at left with dissolve
     tati "Oh… Oh no. Oh no."
     tati "It’s on fire! I… I gotta run!"
 
-    show tati scared
+    show tati scared at Position(xpos = 0.13, xanchor = 0.5) with MoveTransition(0.4)
     # Make Tati face left of screen. Move slightly to the left as if she were leaving, then stop just at the edge of the screen.
-
+    $ renpy.pause(0.3)
     yara "Wait!"
     tati "What was that?!"
     # Make Tati face right.
     yara "Over here! I’m stuck! I-I need help! Please!!"
 
-    scene fire_bg_with_yara1
+    # scene fire_bg_with_yara1 with dissolve
+    scene yara_fire_bg_animated with dissolve
+
+    show tati neutral at Position(xpos = 0.13, xanchor = 0.5) with dissolve
     tati "Oh no! I’ll help, hold on!"
+    $ renpy.pause(0.3)
+    
+    play sound log_falling
+    show tati neutral at center with MoveTransition(0.4)
+
     # Move Tati towards the right of the screen, but stop. Flash screen white and red, shake screen.
+    with flash
+    with flashred
+    with vpunch
+
     #play sound log_falling
+    show tati ball at left with MoveTransition(0.2)
     tati "Ahhh!!"
-    show tati ball at left 
     tati "(That burning log almost landed on me! I almost {i}died!{/i})"
     tati "(I gotta run, I gotta run!)"
     tati "(What am I even doing here? We armadillos only ever run. We don’t fight, that just gets you killed. What can I even do against a wildfire?)"
     tati "(It’s the way it’s always been. Curl up, run, burrow. I need to go before the fire gets me too!)"
     tati "(But…)"
+
+    with flashred
+    with hpunch
     yara "Heeeelp! It’s closing in!"
     # shake screen
     tati "(She’ll die if I leave her! But if I stay I’ll die too! What do I do?!)"
@@ -91,9 +134,10 @@ label save_yara:
     tati "(Okay... Let's cross the fire and get to her!)"
 
 
-    tati "Yaaaaaaahhh!!"
+    tati neutral "Yaaaaaaahhh!!"
     # Quickly move Tati across screen.
-    show tati neutral
+    hide tati with easeoutright
+    show tati neutral at left with easeinleft
     tati "(I did it! I made it without getting hit by anything!)"
     tati "(Hey, you! What happened?!)"
     yara "I was running but then this tree fell and I--I--Gmmrg! I can’t get my paw free!"
@@ -101,43 +145,80 @@ label save_yara:
     tati "(Aha! Maybe I can dig a hole under the tree and get her free that way!)"
 
     # Move Tati back and forth like she’s digging.
+    play sound shoving
+    show tati at Position(xpos = 0.28, xanchor = 0.5) with MoveTransition(0.1)
+    show tati at left with MoveTransition(0.15)
+
+    play sound shoving
+    show tati at Position(xpos = 0.28, xanchor = 0.5) with MoveTransition(0.1)
+    show tati at left with MoveTransition(0.15)
+
+    play sound shoving
+    show tati at Position(xpos = 0.28, xanchor = 0.5) with MoveTransition(0.1)
+    show tati at left with MoveTransition(0.15)
+
+
     tati "There you go!"
     # Move Yara up like she’s springing free.
+    scene forest_fire_bg
+    show flames_animated
+    show tati neutral at left
+    with flash
+    show yara scared at right with easeinbottom
+
 
     yara "Oh my ancestors I thought I was gonna die thank you thank you so much--"
     # Flash screen red and shake again.
     tati @ ball "Eep! Come on, we need to leave!"
     # Move Yara and Tati left out of the screen.
-    
+    hide tati with easeoutleft
+    hide yara with easeoutleft
+
     scene forest_fire_bg
-    show tati surprised at left
+    show tati surprised at left with easeinright
+    show yara neutral at right with easeinright
     tati "Look at all those flames… It’s awful. Is it just going to keep spreading?"
-    show yara scared at right
     yara "Probably. I hope it won’t reach my village…"
     tati @ upset "(That’s right! What if it reaches home? Oh no…)"
     tati "We have to put the fire out!"
 
-    yara @ surprised "What? But how?"
+    yara surprised "What? But how?"
     tati "Fire needs wood to spread, right? What if we cut down the trees around it so it can’t spread?"
 
     show yara neutral
     yara "That’s pretty crazy…"
-    tati @ neutral "We have to try!"
+    tati neutral "We have to try!"
 
     # Move Tati back and forth.
     #play sound shoving
+    play sound shoving
+    show tati at Position(xpos = 0.28, xanchor = 0.5) with MoveTransition(0.1)
+    show tati at left with MoveTransition(0.15)
+
+    play sound shoving
+    show tati at Position(xpos = 0.28, xanchor = 0.5) with MoveTransition(0.1)
+    show tati at left with MoveTransition(0.15)
+
+    play sound shoving
+    show tati at Position(xpos = 0.28, xanchor = 0.5) with MoveTransition(0.1)
+    show tati at left with MoveTransition(0.15)
+
     tati "Mmmmmmrmrrgh! I… can’t…! Why is this thing so sturdy?!"
     yara "We’re not going to pull this off. We’re not big or strong enough…"
     tati "But… But we can’t just do nothing! "
     tati "(But she’s right, we’re not strong enough. Is there some other way we can do this? What do we do…?)"
 
+    with flash
     tuco "Tati! "
+    with vpunch
     # Move Tati like she jumped in surprise.
+    # show tati surprised at Position(ypos = 0.34, yanchor = 0.5) with MoveTransition(0.1)
+    # show tati at left with MoveTransition(0.15)
     tati @ surprised "Ahh! What? Who?"
     tati @ happy "Oh! it’s you!"
 
-    show yara at center
-    show tuco scared at right
+    show yara at center behind tati with MoveTransition(0.5)
+    show tuco scared at right with easeinright
     tuco "What in the world are you doing here? It’s dangerous!"
     tati "We’re trying to put out the fire. But I don’t know what to do!"
     tuco @ surprised "Ah. That’s…"
@@ -162,9 +243,9 @@ label save_yara:
     # Fade in forest bg
     scene forest_day_bg with mediumfade
     play music forest_day_ambience
-    show tuco talking at right
-    show yara happy at center
-    show tati neutral at left
+    show tati neutral at left with dissolve
+    show yara happy at center behind tati with dissolve
+    show tuco talking at right with dissolve
     tuco "Now, let’s do as I said. You both remember the dance, yes?"
     tati "Yeah!"
     yara "Let’s do this!"
@@ -185,16 +266,16 @@ label save_yara:
     # Wait a while
     #play sound rain
     # Flash screen light blue twice
-    show rain with dissolve
+    show rain_animated with flash
     show tati surprised at left with dissolve
 
     tati "We… We did it. It actually worked!"
-    show tuco neutral at right 
+    show tuco neutral at right  with dissolve
     tuco "Of course it did. When have I ever led you astray?"
-    show yara happy at center
+    show yara happy at center behind tati,tuco with dissolve
     yara "Oh, look! Down there! The flames are dying down!"
 
-    stop music
+    stop music fadeout 0.3
 
     show tati neutral
     tati "This is amazing. We really saved the woods!"
@@ -236,7 +317,7 @@ label save_yara:
     show xeni neutral at right with dissolve
     # Xeni slides on the scene 
 
-    tati "(...or not)"
+    tati "(...or not.)"
 
     play music xeni_theme
 
@@ -260,15 +341,19 @@ label save_yara:
     xeni "Are you still looking for that village? It’s just around here. I can go with you if you want and show you the way."
     tati "Yes!!! Thanks Xeni! I’m really excited to get there! "
     xeni "Haha! Let’s go then!"
-    hide xeni with dissolve
+    hide xeni with easeoutright
     tati "(That was really nice of her. And the things she said about me... I’m very happy. I think I never thought of myself as brave or anything like it... )."
+    hide tati with dissolve
 
     stop music fadeout 3
 
     # fade out screen and characters
+    scene black with shortfade
+    scene forest_day_bg with shortfade
     # fade in floresta_densa_dia
 
-    show xeni happy at right
+    show tati neutral at left with dissolve
+    show xeni happy at right with dissolve
     xeni "Well, we’re almost there. I’ll leave you to it, since I don’t think they will see a scarred eye jaguar as a friendly neighbor."
     tati "No worries! Thanks for coming… let’s meet again soon!"
     xeni "Sure! See you around. "
@@ -277,10 +362,11 @@ label save_yara:
     #sllide xeni out
 
     tati "Well, here I go! "
+    hide tati with easeoutright
 
     # fade in aldeia 2
     scene village2 with dissolve
-    show tati confused at left
+    show tati confused at left with dissolve
 
     tati "…"
     tati "Oh… That is… Familiar…"

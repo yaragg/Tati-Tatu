@@ -6,7 +6,7 @@
 image black = "#000"
 image tati neutral = "images/character/tati neutral.png"
 image tati sad = "images/character/tati sad.png"
-image tati happy = "images/character/tati curious.png"
+image tati happy = "images/character/tati neutral.png"
 image tati curious = "images/character/tati curious.png"
 image tati mask = "images/character/tati curious.png"
 image tati horrified = "images/character/tati horrified.png"
@@ -22,6 +22,7 @@ image tuco happy = im.Flip("images/character/tuco talking.png", horizontal=True)
 image tuco talking = im.Flip("images/character/tuco talking.png", horizontal=True)
 image tuco ritual = im.Flip("images/character/tuco ritual.png", horizontal=True)
 image tuco scared = im.Flip("images/character/tuco neutral.png", horizontal=True)
+image tuco surprised = im.Flip("images/character/tuco talking.png", horizontal=True)
 image xeni neutral = im.Flip("images/character/xeni neutral.png", horizontal=True)
 image xeni happy = im.Flip("images/character/xeni happy.png", horizontal=True)
 image xeni angry = im.Flip("images/character/xeni angry.png", horizontal=True)
@@ -32,7 +33,7 @@ image villagers = "images/bg/aldeoes.png"
 
 
 image yara neutral = im.Flip("images/character/yara neutral.png", True)
-image yara surprised = im.Flip("images/character/yara surprised.png", True)
+image yara surprised = im.Flip("images/character/yara scared.png", True)
 image yara happy = im.Flip("images/character/yara happy.png", True)
 image yara dead = im.Flip("images/character/yara dead.png", True)
 image yara neutral = im.Flip("images/character/yara neutral.png", True)
@@ -58,13 +59,14 @@ image cutscene_badending2 = "images/bg/cutscene_badending2.jpg"
 image cutscene_badending3 = "images/bg/cutscene_badending3.jpg"
 
 
-define tati = Character("Tati")
-define xeni = Character("Xeni")
+define tati = Character("Tati", image="tati")
+define xeni = Character("Xeni", image="xeni")
 define villagers = Character("Villager")
-define tuco = Character("Tuco")
-define yara = Character("Yara")
+define tuco = Character("Tuco", image="tuco")
+define yara = Character("Yara", image="yara")
 
 define flash = Fade(0.1, 0.0, 0.5, color="#fff")
+define flashred = Fade(0.1, 0.0, 0.5, color="#f00")
 define longfade = Fade(2.0, 0.0, 0.5, color="#000")
 define mediumfade = Fade(1.0, 0.0, 0.5, color="#000")
 define shortfade = Fade(0.5, 0.0, 0.5, color="#000")

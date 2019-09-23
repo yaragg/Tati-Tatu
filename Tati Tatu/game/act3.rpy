@@ -1,12 +1,23 @@
+image yara_bad_end_animated:
+        "images/bg/cutscene_badending1.jpg"
+        0.75
+        "images/bg/cutscene_badending2.jpg"
+        0.75
+        "images/bg/cutscene_badending3.jpg"
+        0.75
+        repeat
+
 label not_save_yara:
 
     scene forest_fire_bg
-    show tati scared at center
+    show flames_animated
+    show tati scared at center with dissolve
 
     tati "I better run!!!!"
+    hide tati with easeoutleft
 
     scene forest_day_bg with shortfade
-    show tati upset at center
+    show tati upset at center with dissolve
     stop music fadeout 2
     tati @ upset "(I’m sorry…)"
     
@@ -170,7 +181,7 @@ label bad_ending2:
     tati "(BUT AM I ME? OR AM I… YOU?)"
     tati "(THat GIRL IS-)"
 
-    show cutscene_badending1
+    show yara_bad_end_animated
 
     tati "DEAD!!!!!!!"
     #shaking screen
@@ -183,6 +194,7 @@ label bad_ending2:
 
     $ renpy.pause(1)
     window hide
+    show cutscene_badending1 with dissolve
     show text "BAD END"
     $ renpy.pause(2)
     scene black with longfade
