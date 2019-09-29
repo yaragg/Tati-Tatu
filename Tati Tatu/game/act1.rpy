@@ -1,3 +1,16 @@
+image villagers_animated:
+        "images/bg/aldeoes.png"
+        xtile 5
+        parallel:
+            xanchor 1.0
+            linear 120.0 xanchor 0.0
+            repeat
+        parallel:
+            xpos 0.0
+            linear 120.0 xpos 1.0
+            repeat
+
+
 label beginning:
  
     #fade in village1
@@ -5,6 +18,7 @@ label beginning:
     play ambience forest_day_ambience
     scene village1
     show tati upset at left
+
 
     tati "Yet another day like all the others..."
 
@@ -23,6 +37,8 @@ label beginning:
     tati "(Ugh, I should just stop complaining and pick the berries already…)"
  
     #play sound steps
+    play sound steps
+    $ renpy.pause(1.5)
  
     show tati surprised at left
  
@@ -36,35 +52,41 @@ label beginning:
     tati "This surely isn’t from my tribe! Which means that there really is a world unknown to me behind these wooden bars…"
     tati @ upset "A world I’ve been deprived of, for my whole life, out of the fear of the people who came before me. "
     tati "A world these people taught me it never existed. Now I can prove them wrong… I knew it! "
-    tati @ surprised "Where are my friends?! I need to tell them! "
+    tati surprised "Where are my friends?! I need to tell them! "
+    hide tati with easeoutright
  
     # fade out screen
     # fade in village1
+    scene black with shortfade
+    scene village1 with shortfade
 
-    show tati surprised at left
-    show villagers at right
+    show villagers_animated
+    show tati surprised at Position(xpos = 0.13, xanchor = 0.5) with dissolve
+    # show villagers at right
  
     tati "Oh, there they are!"
  
     # slide tati to center
  
-    show tati mask at left
-
-
+    show tati mask
     tati "Hey, take a look at this! I found it lying on the forest entrance and-"
  
     #shake villagers
+    show villager1 at center with dissolve
+    hugo "What the heck is this, Tati?! Throw it out!!! It might be poisonous!!!"
 
-    villagers "What the heck is this, Tati?! Throw it out!!! It might be poisonous!!!"
-    villagers "You shouldn’t be seeking out stuff like that! I’m gonna tell the chief!!"
+    show villager2 at right with dissolve
+    iago "You shouldn’t be seeking out stuff like that! I’m gonna tell the chief!!"
 
-    hide villagers
+    hide villager2 with easeoutright
+    hide villager1 with easeoutright
  
     #slide villagers out
-
     tati "But…"
+    show tati at left with MoveTransition(0.8)
+    $ renpy.pause(0.5)
 
-    show tati upset at left
+    show tati upset
 
     tati "(Huh. Why did I have hope they would react any different?)"
     tati "(Fine then, I’ll try discovering about it by myself…)"
@@ -72,7 +94,7 @@ label beginning:
     tati "(I’ll have to sneak out of the village. Telling my parents is a no - they will react if not worse, the same as Hugo and Iago)"
     
     show tati confused at left
-    tati "(Should I wait for night time? or maybe go right now?)"
+    tati "(Should I wait for night time? Or maybe go right now?)"
 
 
     menu:
@@ -88,9 +110,7 @@ label beginning:
 
 label tuco_presentation_day:
  
-    scene village1
-    show tati neutral at left
-    play ambience forest_day_ambience
+    show tati neutral
  
     tati "(I think if I go right now while everyone’s busy, no one will notice me…!)"
     tati "(Let’s go!!) "
@@ -162,9 +182,7 @@ label tuco_presentation_day:
 
 label tuco_presentation_night:
  
-    scene village1
-    show tati neutral at left
-    play ambience forest_night_ambience
+    show tati neutral
  
     tati "(Okay, I’ll wait ‘til it’s nightime. It’s probably better since everyone will be sleeping!)"
  

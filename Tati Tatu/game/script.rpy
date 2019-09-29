@@ -29,7 +29,6 @@ image xeni angry = im.Flip("images/character/xeni angry.png", horizontal=True)
 
 image villager1 = "images/character/villager1.png"
 image villager2 = "images/character/villager2.png"
-image villagers = "images/bg/aldeoes.png"
 
 
 image yara neutral = im.Flip("images/character/yara neutral.png", True)
@@ -40,6 +39,7 @@ image yara neutral = im.Flip("images/character/yara neutral.png", True)
 image yara ritual = im.Flip("images/character/yara ritual.png", True)
 image yara scared = im.Flip("images/character/yara scared.png", True)
 
+image villagers = "images/bg/aldeoes.png"
 image village1 = "images/bg/aldeia1.jpg"
 image village2 = "images/bg/aldeia2.jpg"
 image rain = "images/bg/chuva.png"
@@ -61,7 +61,8 @@ image cutscene_badending3 = "images/bg/cutscene_badending3.jpg"
 
 define tati = Character("Tati", image="tati")
 define xeni = Character("Xeni", image="xeni")
-define villagers = Character("Villager")
+define hugo = Character("Hugo")
+define iago = Character("Iago")
 define tuco = Character("Tuco", image="tuco")
 define yara = Character("Yara", image="yara")
 
