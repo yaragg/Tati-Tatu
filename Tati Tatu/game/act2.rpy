@@ -227,7 +227,7 @@ label save_yara:
     tuco "Alright. There are three of us… Perhaps we can make this work."
     tuco "I know of an old ritual for calling rain from the heavens."
     tati @ surprised "What?! That’s amazing! Tuco, we need to do this!"
-    tuco "Calm yourself, child. First, we need to go the highest spot we can find around here."
+    tuco "Calm yourself, child. First, we need to go to the highest spot we can find around here."
 
    
     show yara happy
@@ -293,8 +293,8 @@ label save_yara:
     tati "I know. I… I wanted to run, at first. That’s what my people have always done. But… I’m glad I didn’t. Maybe running really isn’t always the answer."
     tati "(Maybe… Maybe not everything I learned back home is right.)"
     tati "(I did my own thing, for once. And it worked out. It was a huge risk, but I’m happy I took it.)"
-    tati @ happy "Oh! but you helped out lots too, tuco. Thank you so much for the ritual!"
-    tuco @ happy "I’m just glad we managed to make it work. I honestly don’t think I would have faced the flames by myself… you inspired me, tati. i saw how you helped yara here."
+    tati @ happy "Oh! but you helped out lots too, Tuco. Thank you so much for the ritual!"
+    tuco @ happy "I’m just glad we managed to make it work. I honestly don’t think I would have faced the flames by myself… you inspired me, Tati. I saw how you helped Yara here."
     tati @ happy "Thank you…"
     tati @ happy "(I’m so embarrassed I don’t even know what to say. He’s so wise. Did I really inspire him?)"
     tuco "Yara, I will fly you--well, walk you back to your village. Tati, do you know where you’re headed?"

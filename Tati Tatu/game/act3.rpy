@@ -121,7 +121,7 @@ label bad_ending:
     tati "(This feels like a good place to lie down and rest)."
     tati "(And it’s sufficiently distant from the fire, as far as I can see)."
     tati "(I laid down on the ground, hid myself a little between leaves and bushes)."
-    tati @ confused "(But… it just occurred to me… why did I decide to sleep here?)"
+    tati @ confused "(But… It just occurred to me… Why did I decide to sleep here?)"
     tati "(I was afraid of the jungle, all I wanted was to head home the fastest I could)."
     tati @ confused "(Why… Did I even make this decision?)"
 
@@ -171,7 +171,7 @@ label bad_ending2:
     tati "(...)"
     tati "(Why is everything dark…? Am I dreaming? I probably am.)"
     tati "(My, what a day I’ve had.)"
-    tati "(There was a jaguar… a toucan…)"
+    tati "(There was a jaguar… A toucan…)"
     tati "(A fire…!)"
     tati "(I’m so horrible… I couldn’t save that girl… )"
     tati "(Why? Why am I like this?)"

@@ -26,7 +26,7 @@ label beginning:
     #play sound steps
 
 
-    tati "Waking up, harvest some fruits, fetching water, cleaning up stuff. The same routine, every. single. Day."
+    tati "Waking up, harvesting some fruits, fetching water, cleaning up stuff. The same routine, every. single. Day."
     # a word per line 
     tati "I don’t know how I can stand it, believe me."
     tati "Everything around here is so boring. Nothing ever happens, everyone stays the same, following the same guidelines. "
@@ -48,9 +48,9 @@ label beginning:
     show tati mask at left
  
     tati "Oh my, what do we have here… This is new!"
-    tati "Ha! Who said that complaining leads to nothing? This is a miracle! "
-    tati "This surely isn’t from my tribe! Which means that there really is a world unknown to me behind these wooden bars…"
-    tati @ upset "A world I’ve been deprived of, for my whole life, out of the fear of the people who came before me. "
+    tati "Ha! Who said that complaining leads to nothing? This is a miracle! Is it a mask...? Well, it looks like a mask!"
+    tati "This surely isn’t from my tribe! I've never seen anything like it. Which means that there really is a world unknown to me behind these wooden bars…"
+    tati @ upset "A world I’ve been deprived of, for my whole life, out of the fear of the people who came before me."
     tati "A world these people taught me it never existed. Now I can prove them wrong… I knew it! "
     tati surprised "Where are my friends?! I need to tell them! "
     hide tati with easeoutright
@@ -143,7 +143,7 @@ label tuco_presentation_day:
     show tati neutral
     tati "Oh, I’m just curious! I’m from a tribe not very far from here. I found this mask and I don’t know what it means…"
     tuco "I see... First time questing through the wilds, if I dare to presume? Judging by the mask you wear, I mean."
-    tati @ surprised "(The mask i wear? what is he talking about?)"
+    tati @ surprised "(The mask I wear? What is he talking about?)"
     tati "Yeah… I don’t know where to start to be honest. Just thought of returning this mask I found back to where it belongs."
     tuco @ talking "Then let me tell you something, my dear…"
     tuco @ talking "There are many lives and forms to be discovered around here and too many places to be explored… Know that if you be brave, nothing can ever stop you."
@@ -219,7 +219,7 @@ label tuco_presentation_night:
     show tati neutral
     tati "Oh, I’m just curious! I’m from a tribe not very far from here. I found this mask and I don’t know what it means…"
     tuco "I see... First time questing through the wilds, if I dare to presume? Judging by the mask you wear, I mean."
-    tati @ surprised "(The mask i wear? what is he talking about?)"
+    tati @ surprised "(The mask I wear? What is he talking about?)"
     tati "Yeah… I don’t know where to start to be honest. Just thought of returning this mask I found back to where it belongs."
     tuco @ talking "Then let me tell you something, my dear…"
     tuco @ talking "There are many lives and forms to be discovered around here and too many places to be explored… Know that if you be brave, nothing can ever stop you."
@@ -290,7 +290,7 @@ label first_jaguar:
 
     show tati upset at left
 
-    tati "That was… really rude of her…"
+    tati "That was… Really rude of her…"
     tati "So I’m not gonna make it? Should I go home and just give up…?"
     tati "I’m really just the boring little me after all…"
 
